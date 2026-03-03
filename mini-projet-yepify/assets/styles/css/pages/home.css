@@ -1,0 +1,87 @@
+/* *****************************************************************
+GENERAL
+***************************************************************** */
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--gradient-top-left);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* *****************************************************************
+HOME
+***************************************************************** */
+.home{
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    
+    .home-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        color: var(--white);
+        gap: 1rem;
+    }
+    
+    .card{
+        width: 55%;
+        display: grid;
+        grid-template: 15% 1fr / 1fr;
+        background-color: rgba(0,0,0,0.1);
+        padding: 3rem;
+        height: 60%;
+        margin: auto;
+        align-items: center;
+        
+        .card-header{
+            border-bottom: 1px solid var(--neonBlue);
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            
+            .text-card-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                p{
+                    color: var(--palatinate-purple);
+                    font-weight: 800;
+                }
+            }
+            img{
+                width: 15%;
+                height: auto;
+            }
+        }
+        
+        .list-card{
+            height: 100%;
+            display: grid;
+            grid-template: repeat(1fr, 7) / 1fr;
+            padding: 0.5rem;
+            
+            .song{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                border-bottom: 1px solid var(--skobeloff);
+                img{
+                    width: 10%;
+                    height: auto;
+                }
+                p{
+                    padding: 1rem 0;
+                    color: var(--white);
+                }
+            }
+            .song:nth-child(n+2){
+                opacity: 50%;
+                font-size: 1.5rem;
+            }
+            .song:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+}
